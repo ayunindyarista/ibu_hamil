@@ -24,3 +24,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::post('/Registrasi/Dokter',\App\Http\Controllers\DokterController::class . '@insert');
 //GET DOKTER
 Route::get('/Data/Dokter',\App\Http\Controllers\DokterController::class . '@index');
+
+//REGISTRASI RELAWAN
+Route::post('/Registrasi/Relawan',\App\Http\Controllers\RelawanController::class . '@insert');
+//GET RELAWAN
+Route::get('/Data/Relawan',\App\Http\Controllers\RelawanController::class . '@index');

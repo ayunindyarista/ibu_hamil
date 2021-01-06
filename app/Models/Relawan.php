@@ -33,7 +33,6 @@ class Relawan extends Model
 	public $timestamps = false;
 
 	protected $casts = [
-		'STATUS' => 'bool'
 	];
 
 	protected $fillable = [
@@ -41,7 +40,6 @@ class Relawan extends Model
 		'ALAMAT',
 		'NO_TELP',
 		'NIK',
-		'STATUS',
 		'EMAIL',
 		'PASSWORD'
 	];

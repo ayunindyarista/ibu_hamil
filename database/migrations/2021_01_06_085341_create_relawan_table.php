@@ -17,9 +17,8 @@ class CreateRelawanTable extends Migration
             $table->string('ID_RELAWAN', 8)->primary();
             $table->string('NAMA', 50);
             $table->string('ALAMAT', 100);
-            $table->string('NO_TELP', 12);
+            $table->string('NO_TELP', 13);
             $table->string('NIK', 16);
-            $table->tinyInteger('STATUS');
             $table->string('EMAIL', 30);
             $table->string('PASSWORD', 300);
         });
