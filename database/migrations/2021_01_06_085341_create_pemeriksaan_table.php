@@ -17,15 +17,19 @@ class CreatePemeriksaanTable extends Migration
             $table->integer('ID_PEMERIKSAAN')->primary();
             $table->string('ID_PASIEN', 8)->index('MENJALANI_FK');
             $table->string('ID_RELAWAN', 8)->index('MELAKUKAN_FK');
-            $table->dateTime('TGL_PEMERIKSAAN');
+            $table->date('TGL_PEMERIKSAAN')->nullable();
             $table->integer('KEHAMILAN_KE');
-            $table->string('KELUHAN', 1000);
+            $table->string('KELUHAN', 1000)->nullable();
             $table->float('TEKANAN_DARAH_SISTOL', 10, 0);
             $table->float('TEKANAN_DARAH_DIASTOL', 10, 0);
             $table->float('BERAT_BADAN', 10, 0);
             $table->float('TINGGI_BADAN', 10, 0);
             $table->integer('UMUR_KEHAMILAN');
-            $table->binary('FOTO');
+            $table->date('TGL_RESPON');
+            $table->string('RESPONMEDIS', 300)->nullable();
+            $table->binary('FOTO')->nullable();
+            $table->date('created_at');
+            $table->date('updated_at');
         });
     }
 

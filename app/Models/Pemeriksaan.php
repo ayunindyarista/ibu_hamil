@@ -47,11 +47,13 @@ class Pemeriksaan extends Model
 		'BERAT_BADAN' => 'float',
 		'TINGGI_BADAN' => 'float',
 		'UMUR_KEHAMILAN' => 'int',
-		'FOTO' => 'boolean'
 	];
 
 	protected $dates = [
-		'TGL_PEMERIKSAAN'
+		'TGL_PEMERIKSAAN',
+		'TGL_RESPON',
+		'created_at',
+		'updated_at'
 	];
 
 	protected $fillable = [
@@ -65,7 +67,11 @@ class Pemeriksaan extends Model
 		'BERAT_BADAN',
 		'TINGGI_BADAN',
 		'UMUR_KEHAMILAN',
-		'FOTO'
+		'TGL_RESPON',
+		'RESPONMEDIS',
+		'FOTO',
+		'created_at',
+		'updated_at'
 	];
 
 	public function relawan()

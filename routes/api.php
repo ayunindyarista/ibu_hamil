@@ -29,3 +29,14 @@ Route::get('/Data/Dokter',\App\Http\Controllers\DokterController::class . '@inde
 Route::post('/Registrasi/Relawan',\App\Http\Controllers\RelawanController::class . '@insert');
 //GET RELAWAN
 Route::get('/Data/Relawan',\App\Http\Controllers\RelawanController::class . '@index');
+
+//REGISTRASI PASIEN
+Route::post('/Registrasi/Pasien',\App\Http\Controllers\PasienController::class . '@insert');
+//GET PASIEN
+Route::get('/Data/Pasien',\App\Http\Controllers\PasienController::class . '@index');
+
+//PEMERIKSAAN PASIEN
+//PEMERIKSAAN
+Route::post('/Pemeriksaan',\App\Http\Controllers\PemeriksaanController::class . '@insert');
+//DATA PEMERIKSAAN
+Route::get('/Data/Pemeriksaan',\App\Http\Controllers\PemeriksaanController::class . '@index');
