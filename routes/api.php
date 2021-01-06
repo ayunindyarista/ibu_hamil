@@ -17,3 +17,10 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+//REGISTRASI
+ 
+//REGISTRASI DOKTER
+Route::post('/Registrasi/Dokter',\App\Http\Controllers\DokterController::class . '@insert');
+//GET DOKTER
+Route::get('/Data/Dokter',\App\Http\Controllers\DokterController::class . '@index');
