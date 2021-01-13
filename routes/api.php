@@ -42,7 +42,7 @@ Route::post('/Pemeriksaan',\App\Http\Controllers\PemeriksaanController::class . 
 Route::get('/Data/Pemeriksaan',\App\Http\Controllers\PemeriksaanController::class . '@index');
 
 Route::post('login', \App\Http\Controllers\API\UserController::class . '@login');
-Route::post('register', \App\Http\Controllers\API\UserController::class . '@register');
+// Route::post('register', \App\Http\Controllers\API\UserController::class . '@register');
 
 Route::group(['middleware' => 'auth:api'], function(){
 	Route::post('details', \App\Http\Controllers\API\UserController::class . '@details');
